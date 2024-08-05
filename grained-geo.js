@@ -1,4 +1,4 @@
-    (function (window, doc) {
+(function (window, doc) {
 
         "use strict";
 
@@ -108,7 +108,7 @@
             style.innerHTML = animation;
             doc.body.appendChild(style);
 
-            //add custimozed style
+            //add customized style
             var styleAdded = doc.getElementById('grained-animation-' + elementId);
             if (styleAdded) {
                 styleAdded.parentElement.removeChild(styleAdded);
@@ -126,12 +126,12 @@
                 while (pre--) {
                     rule += prefixes[pre] + 'animation-name:grained;';
                     rule += prefixes[pre] + 'animation-iteration-count: infinite;';
-                    rule += prefixes[pre] + 'animation-duration: ' + options.grainChaos + 's;';
-                    rule += prefixes[pre] + 'animation-timing-function: steps(' +options.grainSpeed + ', end);';
+                    rule += prefixes[pre] + 'animation-duration: ' + options.grainSpeed + 'ms;';
+                    rule += prefixes[pre] + 'animation-timing-function: linear;';
                 }
             }
 
-            //selecter element to add grains
+            //selector element to add grains
             selectorElement = '#' + elementId + '::before';
 
 
